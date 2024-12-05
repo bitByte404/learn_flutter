@@ -112,7 +112,7 @@ class _CountState extends State<Count> with SingleTickerProviderStateMixin {
                   // color: Colors
                   //     .primaries[Random().nextInt(Colors.primaries.length)],
                   border: Border.all(color: Colors.red),
-                  borderRadius: BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(50),
                 ),
                 padding: const EdgeInsets.all(66),
                 child: Text(
