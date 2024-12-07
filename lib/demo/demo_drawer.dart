@@ -47,7 +47,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: const Text('Scafford内部打开左侧菜单'),
                 );
               }),
-
               Builder(builder: (context) {
                 return MaterialButton(
                   color: Colors.pink,
@@ -103,7 +102,7 @@ class HomeDrawer extends StatelessWidget {
           Container(
             height: 250,
             color: Colors.greenAccent,
-            child: Align(
+            child: const Align(
               alignment: Alignment.bottomCenter,
               child: Column(
                 children: [
@@ -111,35 +110,49 @@ class HomeDrawer extends StatelessWidget {
                     Icons.supervised_user_circle_outlined,
                     size: 150,
                   ),
-                  const Text('阿伟炸鸡'),
+                  Text('阿伟炸鸡'),
                 ],
               ),
             ),
           ),
           ...List.generate(8, (index) {
-            return ListTile(
+            return const ListTile(
               leading: Icon(
                 Icons.comment,
               ),
-              title: const Text('浏览记录'),
+              title: Text('浏览记录'),
               trailing: Icon(
                 Icons.arrow_forward_ios,
                 color: Color(0xFFF5F5F9),
               ),
             );
           }),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              const CustomIcon(label: '扫一扫', icon: Icons.document_scanner,),
-              const CustomIcon(label: '帮助与客服', icon: Icons.live_help_outlined,),
-              const CustomIcon(label: '设置', icon: Icons.settings,),
-              GestureDetector( onTap: () {
-                Navigator.of(context).pop();
-              }, child: const CustomIcon(label: '关闭', icon: Icons.exit_to_app,)),
+              const CustomIcon(
+                label: '扫一扫',
+                icon: Icons.document_scanner,
+              ),
+              const CustomIcon(
+                label: '帮助与客服',
+                icon: Icons.live_help_outlined,
+              ),
+              const CustomIcon(
+                label: '设置',
+                icon: Icons.settings,
+              ),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).pop();
+                  },
+                  child: const CustomIcon(
+                    label: '关闭',
+                    icon: Icons.exit_to_app,
+                  )),
             ],
           )
         ],
@@ -153,7 +166,9 @@ class CustomIcon extends StatelessWidget {
   final IconData? icon;
 
   const CustomIcon({
-    super.key, required this.label, required this.icon,
+    super.key,
+    required this.label,
+    required this.icon,
   });
 
   @override

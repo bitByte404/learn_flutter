@@ -8,12 +8,14 @@ class TabPage extends StatefulWidget {
 }
 
 // AutomaticKeepAliveClientMixin保持组件运行转台，但是这种页面不能太多
-class _TabPageState extends State<TabPage>with AutomaticKeepAliveClientMixin<TabPage> {
-
+class _TabPageState extends State<TabPage>
+    with AutomaticKeepAliveClientMixin<TabPage> {
   @override
   Widget build(BuildContext context) {
     super.build(context);
-    return const Center(child: Text('test'),);
+    return const Center(
+      child: Text('test'),
+    );
   }
 
   @override
